@@ -7,9 +7,9 @@
 
 Game's purpose and descripti on:
 
-the players has defend his/her base (tower) by shooting the enemies.
-If the enemies reaches his/her base the player dies. 
-each time the player kills an enemy his/her get 10 or 20 points, depending on the type of enemy that has been killed.
+the player has to defend the base (tower) by shooting the enemies.
+If the enemies reach the base, the player dies. 
+When the player kills an enemy, he earns 10 or 20 points, depending on the type of enemy that has been killed.
 
 ## User stories MVP
 
@@ -24,9 +24,7 @@ Minimum user stories:
 
 ## User stories Backlog
 
-- User can ...
-
-* can also get others weapons (arrows, stones, etc.) or only one weapon. 
+* can get others weapons (arrows, stones, etc.) or only one weapon. 
 * Some enemies give the user  10 points, others 20 points, and the last one (the dragon) will give 500 points. 
 * uses  arrows as a weapon.
 
