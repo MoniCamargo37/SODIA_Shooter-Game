@@ -4,7 +4,7 @@
 }
 body {
   padding-top: 75px;
-  background-image: url("../img/background-Medieval.jpg");
+  background-image: url("../img/medieval.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -19,7 +19,6 @@ body {
   border-radius: 100px;
   margin: 0;
   padding: 0;
-
 }
 
 canvas {
@@ -31,7 +30,8 @@ canvas {
 }
 
 #start-page,
-#lose-page {
+#lose-page,
+#win-page {
   height: 800px;
   width: 1000px;
   display: flex;
@@ -47,51 +47,57 @@ canvas {
 #lose-page {
   display: none;
 }
+#win-page {
+  display: none;
+}
 .titleText {
   font-size: 80px;
   color: white;
   text-align: center;
+  /*animation: glow 1s ease-in-out infinite alternate;*/
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
-  font-weight:bold;
- margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 @-webkit-keyframes glow {
-  from {
+  0%,
+  100% {
     text-shadow: 0 0 10px grey, 0 0 20px grey, 0 0 30px #ff8c00,
       0 0 40px #ff8c00, 0 0 50px #ff8c00, 0 0 60px #ff8c00, 0 0 70px #ff8c00;
   }
 
-  to {
+  50% {
     text-shadow: 0 0 20px grey, 0 0 30px #ff8c00, 0 0 40px #ff8c00,
       0 0 50px #ff8c00, 0 0 60px #ff8c00, 0 0 70px #ff8c00, 0 0 80px #ff8c00;
   }
 }
- .h1One {
-    text-align: center;
-    font-size: 30px;
-    color: white;
-    font-weight:bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
- }
-
- #start-page p {
+.h1One {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#start-page {
+  background-image: url("../img/WinPageBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+ 
+}
+#start-page p {
   margin-top: 40px;
   margin-left: 100px;
   margin-right: 100px;
-  text-align:justify;
+  text-align: justify;
   font-size: 23px;
   color: white;
-  font-weight:bold;
- }
+  font-weight: bold;
+}
 
- .instructions {
-  text-align: center;
- }
- .intructions ul {
-  text-align: left;
-  display: inline-block;
- }
 
 li {
   display: flex;
@@ -99,12 +105,12 @@ li {
   justify-content: space-between;
   text-align: justify;
   color: #3f3f3f;
-  list-style: none;
+  text-decoration-style: dotted;
   font-size: 20px;
-  font-weight:bold;
+  font-weight: bold;
   margin-left: 200px;
   margin-right: 200px;
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
 #start {
@@ -129,6 +135,122 @@ li {
   color: white;
   background-color: #ff8c00;
 }
+#lose-page {
+  background-image: url("../img/lostPage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 10px solid rgb(126, 95, 1);
+  border-radius: 100px;
+}
+#lose-page h2 {
+  font-size: 80px;
+  color: rgb(17, 19, 17);
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+ #lose-page h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(100, 7, 7); 
+ 
+  
+ -webkit-text-stroke: 1px #F0E68C;
+	text-shadow: 0px 4px 4px #F0E68C;
+ }
+
+ #tryLoseButton {
+  width: 150px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 40px;
+  color: black;
+  font-weight: 900;
+  border-color: #ff8c00;
+  border-width: 5px;
+  margin-left: 420px;
+}
+
+#tryLoseButton:hover {
+  color: white;
+  background-color: #1d1a17;
+}
+
+
+
+ #win-page {
+  background-image: url("../img/winGirlPage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 10px solid rgb(126, 95, 1);
+  border-radius: 100px;
+}
+
+ #win-page h1 {
+  font-size: 60px;
+  color: #F0E68C;
+  font-weight: bold;
+  -webkit-text-stroke: 1px rgb(100, 7, 7);
+	text-shadow: 0px 4px 4px rgb(100, 7, 7);
+ }
+ 
+ #win-page h2 {
+  font-size: 80px;
+  color: rgb(100, 7, 7);
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+	text-shadow: 0px 4px 4px #F0E68C;
+  margin-bottom: 20px;
+ }
+
+ #tryWinButton {
+  width: 150px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  font-size: 20px;
+  background-color:white;
+  border-radius: 40px;
+  font-weight: 900;
+  color: black;
+  border-color: #ff8c00;
+  border-width: 5px;
+  margin-left: 420px;
+}
+
+#tryWinButton:hover {
+  color: white;
+  background-color: #1d1a17;
+}
+
+/* @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px grey, 0 0 20px grey, 0 0 30px #ff8c00,
+      0 0 40px #ff8c00, 0 0 50px #ff8c00, 0 0 60px #ff8c00, 0 0 70px #ff8c00;
+  }
+
+  to {
+    text-shadow: 0 0 20px grey, 0 0 30px #ff8c00, 0 0 40px #ff8c00,
+      0 0 50px #ff0015, 0 0 60px #ff0015, 0 0 70px #ff0015, 0 0 80px #ff0015;
+  }
+} */
+
 /* Auxiliar classes */
 
 .hidden {

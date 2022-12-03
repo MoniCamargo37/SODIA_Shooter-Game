@@ -1,7 +1,3 @@
-const canvas = document.querySelector('#canvas');
-let width = this.warrior.width;
-let height =  this.warrior.height;
-
 class Player {
   constructor(x, y, width, height) {
     this.image = warrior;
@@ -10,32 +6,37 @@ class Player {
     this.width = width;
     this.height = height;
     this.speedX = 0;
-    this.centerX = center.x;
-    centerY = center.y
-    //this.direction = 'y = 400', 'X = 400', 'y = - 400', 'X = - 400'
+    this.position = 'south';
   }
 
   turnRight() {
-    this.image.rotate(45 * Math.PI / 180);
+    // this.x = this.x + 15;
+    // if (this.x + this.width > 800) {
+    //   this.x = 0;
+    
+    this.position = 'east';
   }
   turnLeft() {
-    this.x = this.x - 15;
-    if (this.x + this.width < 0) {
-      this.x = 800;
-    }
+    // this.x = this.x - 15;
+    // if (this.x + this.width < 0) {
+    //   this.x = 800;
+    
+    this.position = 'west'
   }
-  turnUP() {
-    this.y = this.y + 15;
-    if (this.y > 800) {
-      this.y = 0 - this.height;
-    }
+  turnUp() {
+    // this.y = this.y - 15;
+    // if (this.y + this.height < 0) {
+    //   this.y = 800;
+    // }
+    this.position = 'north'
   }
 
 turnDown() {
-    this.x = this.y - 15;
-    if (this.y + this.width < 0) {
-      this.y = 800;
-    }
+    // this.y = this.y + 15;
+    // if (this.y > 800) {
+    //   this.y = 0 - this.height;
+    // }
+    this.position = 'south'
   }
 
 }
