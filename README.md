@@ -51,5 +51,5 @@ instructions below:
 
 <!-- When you finish, add these links and commit -->
 
-- [Deployed game](https://docs.google.com/presentation/d/17o8pfU952duM68wNuS3tq6jQ3p9ZCGPL/edit?usp=sharing&ouid=103696499090412195476&rtpof=true&sd=true)
-- [Deployed game]()
+- [Presenattion Slides](https://docs.google.com/presentation/d/17o8pfU952duM68wNuS3tq6jQ3p9ZCGPL/edit?usp=sharing&ouid=103696499090412195476&rtpof=true&sd=true)
+- [Deployed game](https://monicamargo37.github.io/SODIA_Shooter-Game/)
