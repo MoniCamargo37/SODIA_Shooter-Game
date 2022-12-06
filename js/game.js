@@ -14,7 +14,6 @@ class Game {
     this.showEnemySpeed = 800; //Se puede inicializar con cualquier valor para cada atributo porque los vamos a sobreescribir cada vez que se dispare
     this.dragonShowed = false; // false  porque el dragon no se ha mostrado todavía
     this.playing = true; // la añadimos a la función gameOver() y a  winTheGame() pero = false,  esto sirve para evitar que se junto las dos paginas en la pantalla.
-    startPagesong.play();
   }
 
   _generateEnemies() {
@@ -73,7 +72,7 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
   _checkCollisions() {
     const heroCenterX = 400;
     const heroCenterY = 400;
-    this.enemy.forEach((theEnemy, indexEnemy) => {
+    this.enemy.every((theEnemy, indexEnemy) => {
       
       //Check collision with the bullets
       this.bullets.forEach((theBullet, indexBullet) => {
@@ -91,8 +90,6 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
                     gamePageSong.pause();
                     winPagesong.play();
                     this._winTheGame();
-                    // cancelAnimationFrame(id);
-                    // console.log(this._winTheGame);
                   }
                   this.enemy.splice(indexEnemy, 1); // elimina los enemigos impactados
                 }
@@ -140,16 +137,6 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
             }
           });
     
-      //  const northShoot = bullet.x + bullet.width +bullet.y + bullet.height/ 2);
-      //  const southShoot = theEnemy.y + (bullet.y -bullet.height / 2);
-      //  const
-      //  if ()
-      //  let shooting = Math.abs(xShooting*xShooting + yShooting+yShooting);
-      //  if (shooting < 50) {
-      //   indexOf(this.enemy);
-      //   this.enemy.splice(this.enemy);
-      //  }
-      // })
       const xDiff = 400 - (theEnemy.x + theEnemy.widthEnemy / 2); // calcular la diferencia entre los puntos centrales del enemigo y el jugador. calculo el ancho width entre 2 y se los sumo la posición X (esquina superior ezquierda)
       const yDiff = 400 - (theEnemy.y + theEnemy.heightEnemy / 2);
       let distance = Math.sqrt( xDiff*xDiff + yDiff*yDiff ); //distancia entre los 2 puntos/teorema d epintagoras, calculo
@@ -158,8 +145,10 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
       if (distance < 100){ // calculo la distancia que quiero que el enemigo muera antes de llegar al player.
         if(this.playing){
           this._gameOver();
+          return false;
         }
       }
+      return true;
     });
   }
 
@@ -286,9 +275,7 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
     this.ctx.fillText(`Score: ${this.points}`, 580, 25);
   }
   
-//  TryAgainButton.onclick = function () {
-//   //     window.location.reload();
-//   //   };
+
   _update() {
     this._clean();
     this._writeScore();
@@ -300,7 +287,6 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
   }
 
   start() {
-    startPagesong.pause();
     gamePageSong.play();
     this._assignControls();
     this._generateEnemies();

@@ -1,5 +1,3 @@
-let startPagesong = new Audio();
-startPagesong.src = '../img/Kamelot - New Allegiance.mp3';
 
 let lostPagesong = new Audio();
 lostPagesong.src = '../img/GameOver.mp3';

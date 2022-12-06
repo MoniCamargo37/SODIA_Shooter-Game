@@ -7,7 +7,7 @@ window.onload = function () {
   const tryWinButton = document.getElementById('tryWinButton');
   const losePage = document.getElementById('lose-page');
   const tryLoseButton = document.getElementById('tryLoseButton');
-  startPagesong.play();
+  
   
   startButton.onclick = function () {
     startPage.style = "display: none";
@@ -23,12 +23,5 @@ window.onload = function () {
     window.location.reload();  
   }
 }
-
-
-  // returnStartButtonWin.onclick = function () {
-  //   window.location.reload();
-  // };
-
-//un ejemplo de boton que al acabar reinicia el juego
 
 
