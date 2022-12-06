@@ -40,7 +40,7 @@ canvas {
   text-align: center;
   margin: 0 auto;
   background-color: #999999;
-  border: 10px solid black;
+  border: 10px solid  rgb(126, 95, 1);;
   border-radius: 100px;
 }
 
@@ -74,44 +74,89 @@ canvas {
   }
 }
 .h1One {
-  text-align: center;
-  font-size: 30px;
-  color: white;
+  text-align:start;
+  font-size: 35px;
+  color: black;
   font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-#start-page {
-  background-image: url("../img/WinPageBackground.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
- 
-}
-#start-page p {
-  margin-top: 40px;
-  margin-left: 100px;
-  margin-right: 100px;
-  text-align: justify;
-  font-size: 23px;
-  color: white;
-  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 250px;
+  -webkit-text-stroke: 1px #4e4729;
+	text-shadow: 0px 4px 4px #4e4729;
 }
 
+.h1Two {
+  text-align:start;
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 250px;
+  -webkit-text-stroke: 1px #4e4729;
+	text-shadow: 0px 4px 4px #4e4729;
+}
 
 li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: justify;
-  color: #3f3f3f;
-  text-decoration-style: dotted;
+  color: black  ;
   font-size: 20px;
   font-weight: bold;
+  margin-left: 250px;
+  margin-right: 250px;
+  text-shadow: 0px 10px 6px black;
+}
+
+.textLi li {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  text-align: justify;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 250px;
+  margin-right: 250px;
+  text-shadow: 0px 10px 6px white;
+ 
+}
+
+.textP2 {
   margin-left: 200px;
   margin-right: 200px;
-  margin-bottom: 5px;
+  text-align: center;
+  font-size: 30px;
+  color:#7E5109;
+  font-weight: bold;
+  margin-top: 5px;
+  font-weight: 900;
+  -webkit-text-stroke: 1px #4e4729;
+	text-shadow: 0px 4px 4px black;
 }
+
+#start-page {
+
+  background-image: url("../img/WinPageBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.textP1 {
+  margin-top: 40px;
+  margin-left: 150px;
+  margin-right: 150px;
+  text-align: justify;
+  font-size: 35px;
+  color: rgb(126, 95, 1);
+  font-weight: 900;
+  -webkit-text-stroke: 0.5px white;
+	text-shadow: 6px 6px 6px black;
+}
+
+
 
 #start {
   width: 150px;
@@ -122,7 +167,7 @@ li {
   flex-direction: row;
   text-align: center;
   font-size: 20px;
-  background-color: transparent;
+  background-color: black;
   border-radius: 40px;
   font-weight: bold;
   color: white;
@@ -189,7 +234,7 @@ li {
 
 
  #win-page {
-  background-image: url("../img/winGirlPage.png");
+  background-image: url("../img/winPic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

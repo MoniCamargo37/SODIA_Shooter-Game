@@ -79,6 +79,7 @@ class enemy {
           break;
         case 'east':
           this.image = enemyEast1;
+          break;
         case 'west':
           this.image = enemyWest1;
           break;
@@ -108,7 +109,7 @@ class enemy {
   }
   _showDragon() {
     this.x =  200;
-    this.y =  -350;
+    this.y =  -400;
     this.widthEnemy = 400;
     this.heightEnemy = 400;
     this.entrance = 'north';

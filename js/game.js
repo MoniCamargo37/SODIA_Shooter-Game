@@ -11,9 +11,10 @@ class Game {
     this.generateInterval = null;
     this.timerMovement = undefined;
     this.newBullet = {x: 0, y: 0, direction: '', active: true}; 
-    this.showEnemySpeed = 1000; //Se puede inicializar con cualquier valor para cada atributo porque los vamos a sobreescribir cada vez que se dispare
+    this.showEnemySpeed = 800; //Se puede inicializar con cualquier valor para cada atributo porque los vamos a sobreescribir cada vez que se dispare
     this.dragonShowed = false; // false  porque el dragon no se ha mostrado todavía
     this.playing = true; // la añadimos a la función gameOver() y a  winTheGame() pero = false,  esto sirve para evitar que se junto las dos paginas en la pantalla.
+    startPagesong.play();
   }
 
   _generateEnemies() {
@@ -24,8 +25,8 @@ class Game {
       newEnemy._assignImage();
       newEnemy._enemiesInvasion();
       this._accelerateGame();
-      this.enemy.push(newEnemy);
-      if ( this.points >= 800 && !this.dragonShowed) { // si llega a 500 points not dragon showed tenemos que crear una funcion para llamarlo
+      this.enemy.unshift(newEnemy);
+      if ( this.points >= 500 && !this.dragonShowed) { // si llega a 500 points not dragon showed tenemos que crear una funcion para llamarlo
         const dragon = new enemy();
         dragon._showDragon(); // llamamos la funcion showDragon
         this.enemy.push(dragon); // push el dragon
@@ -86,8 +87,12 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
                 if(theEnemy.live === 0){
                   this.points += theEnemy.points; // suma los puntos antes de eliminar los enemigos
                   if(theEnemy.role === 'dragon'){
+                    shotEffect = null;
+                    gamePageSong.pause();
+                    winPagesong.play();
                     this._winTheGame();
-                    console.log(this._winTheGame);
+                    // cancelAnimationFrame(id);
+                    // console.log(this._winTheGame);
                   }
                   this.enemy.splice(indexEnemy, 1); // elimina los enemigos impactados
                 }
@@ -151,7 +156,6 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
       //el punto X Y indica la esquina superior izquierda de los dibujos, para calcular el centro del enemigo sumo
       //console.log("Distancia del enemigo: ", distance);
       if (distance < 100){ // calculo la distancia que quiero que el enemigo muera antes de llegar al player.
-//        clearInterval(this.timerMovement);
         if(this.playing){
           this._gameOver();
         }
@@ -211,13 +215,12 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
           }
         }
     });
-{
-  
-}
   }
   //done Wed Thur 1st
   _shoot() {
-    this.newBullet = {x: 0, y: 0, direction: this.warrior.position, active: true}; // paso position  x, y(posición  inicial de la bala) que luego serán modificadas y tb defino la dirección(que es la de warrior (N,S,W,E)
+    shotEffect.currentTime = 0;
+    shotEffect.play();
+    this.newBullet = {x: 0, y: 0, direction: this.warrior.position, active: true}; // paso position  x, y(posición  inicial de la bala) que luego serán modificadas ytb defino la dirección(que es la de warrior (N,S,W,E)
     switch (this.warrior.position) {
       //defino la posición inicial de la bala 
       case 'north': 
@@ -241,6 +244,7 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
     }
     // aqui la pongo en bullets con el push()
     this.bullets.push(this.newBullet);
+    shotEffect.play();
   }
 
   // 
@@ -250,12 +254,16 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
   
   //done Wed / Thur 1st
   _gameOver() {
+    shotEffect = null;
+    gamePageSong.pause();
+    lostPagesong.play();
     clearInterval(this.generateInterval);
-      const losePage = document.getElementById('lose-page');
+    const losePage = document.getElementById('lose-page');
      losePage.style = "display: flex";
      const canvas = document.getElementById('canvas'); 
      canvas.style = "display: none";
      this.playing = false; // para no salir junto con la pagina de win
+    
    }
    
    _winTheGame() {
@@ -292,6 +300,8 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
   }
 
   start() {
+    startPagesong.pause();
+    gamePageSong.play();
     this._assignControls();
     this._generateEnemies();
     this.timerMovement = setInterval(this._update(), 40);

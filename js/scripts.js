@@ -7,6 +7,7 @@ window.onload = function () {
   const tryWinButton = document.getElementById('tryWinButton');
   const losePage = document.getElementById('lose-page');
   const tryLoseButton = document.getElementById('tryLoseButton');
+  startPagesong.play();
   
   startButton.onclick = function () {
     startPage.style = "display: none";
