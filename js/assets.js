@@ -5,9 +5,9 @@ const winPagesong = new Audio();
 winPagesong.src = '../img/winSong.mp3';
 
 const gamePageSong = new Audio();
-gamePageSong.src = '../img/Game song.mp3';
+gamePageSong.src = '../img/Gamesong.mp3';
 
-const shotEffect = new Audio();
+let shotEffect = new Audio();
 shotEffect.src = '../img/shot.mp3';
 
 const warriorDown = new Image();

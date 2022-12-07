@@ -207,6 +207,7 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
   }
   //done Wed Thur 1st
   _shoot() {
+    if (shotEffect === null) return;
     shotEffect.currentTime = 0;
     shotEffect.play();
     this.newBullet = {x: 0, y: 0, direction: this.warrior.position, active: true}; // paso position  x, y(posición  inicial de la bala) que luego serán modificadas ytb defino la dirección(que es la de warrior (N,S,W,E)
