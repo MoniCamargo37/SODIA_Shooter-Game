@@ -1,16 +1,14 @@
-
-let lostPagesong = new Audio();
+const lostPagesong = new Audio();
 lostPagesong.src = '../img/GameOver.mp3';
 
-let winPagesong = new Audio();
+const winPagesong = new Audio();
 winPagesong.src = '../img/winSong.mp3';
 
-let gamePageSong = new Audio();
+const gamePageSong = new Audio();
 gamePageSong.src = '../img/Game song.mp3';
 
-let shotEffect = new Audio();
+const shotEffect = new Audio();
 shotEffect.src = '../img/shot.mp3';
-
 
 const warriorDown = new Image();
 warriorDown.src= '../img/heroDown.png';
@@ -24,7 +22,6 @@ warriorRight.src= '../img/heroRight.png';
 const warriorLeft = new Image();
 warriorLeft.src= '../img/heroLeft.png';
 
-
 const enemyNorth1 = new Image();
 enemyNorth1.src= '../img/enemyNorth1.png';
 
@@ -36,9 +33,6 @@ enemySouth1.src= '../img/enemySouth1.png';
 
 const enemyWest1 = new Image();
 enemyWest1.src= '../img/enemyWest1.png';
-
-
-
 
 const enemyNorth2 = new Image();
 enemyNorth2.src= '../img/wolfSouth.png';
