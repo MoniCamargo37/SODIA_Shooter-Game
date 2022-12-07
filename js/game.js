@@ -181,8 +181,6 @@ _accelerateGame() { // this function speeds up the entry of enemies gradually. I
   }
   //done Wed , Thur 1st
   _drawBullets() {
-    let myBulletImg = new Image();
-    myBulletImg.src = '../img/bullet.png';
     this.bullets.forEach(bullet => {
       if(bullet.active === true){ // true : porque hay que mover la bala por la pantalla ( bala está juego)
         this.ctx.drawImage(myBulletImg, bullet.x-10, bullet.y-10, 20, 20);

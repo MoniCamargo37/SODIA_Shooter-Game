@@ -48,3 +48,6 @@ enemyEast2.src= './img/wolfEast.png';
 
 const enemyDragon = new Image();
 enemyDragon.src = './img/enemyDragon.png';
+
+let myBulletImg = new Image();
+myBulletImg.src = './img/bullet.png';
