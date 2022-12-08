@@ -18,23 +18,24 @@ instructions below:
 
 ## User stories MVP
 
-* Use LEFT / RIGHT / UP / DOWN arrows to move the player, so turns around (north, south, west, east)  and click space to shoot.
-* user can see a start screen with instructions and end screen when user wins / loses.
-* Enemies have differences in terms of their "value : Some enemies give the user  10 points, others 20 points, and the last one (the dragon) will give 500 points. 
 * Press START button to start the game.
+* Use LEFT / RIGHT / UP / DOWN arrows to move the player, so turns around (north, south, west, east)  and click space to shoot.
 * Enemies appear from north, south, east and west.
 * User shoots to the 4 directions.
 * if BabyDragon is killed user wins.
 * if enemies touch the user, user loses
+* Enemies have differences in terms of their "value : Some enemies give the user  10 points, others 20 points, and the last one (the dragon) will give 100 points.
+* user can see a start screen with instructions and end screen when user wins or loses. 
+
 
 ## User stories Backlog
-  Bonus:
+ Upcoming developments!
+
 * User can choose other weapons (arrows, stones, etc.) or
 * Add more than 1 enemy dragon on the board, at least 1 per direction.
 * Put a maximum number of bullets and if the user runs out of bullets, the user dies.
 * User can move/walk around the board in different directions.
-
-
+* User can choose between 3 levels on the start page 
 
 ## File structure
 
