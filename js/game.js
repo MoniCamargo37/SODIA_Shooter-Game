@@ -25,7 +25,7 @@ class Game {
       newEnemy._enemiesInvasion();
       this._accelerateGame();
       this.enemy.unshift(newEnemy);
-      if ( this.points >= 300 && !this.dragonShowed) { // si llega a 500 points not dragon showed tenemos que crear una funcion para llamarlo
+      if ( this.points >= 250 && !this.dragonShowed) { // si llega a 500 points not dragon showed tenemos que crear una funcion para llamarlo
         const dragon = new enemy();
         dragon._showDragon(); // llamamos la funcion showDragon
         this.enemy.push(dragon); // push el dragon
