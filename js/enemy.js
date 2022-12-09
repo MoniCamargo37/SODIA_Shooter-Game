@@ -114,7 +114,7 @@ class enemy {
     this.heightEnemy = 400;
     this.entrance = 'north';
     this.speed = 2;
-    this.live = 10;
+    this.live = 20;
     this.points = 100;
     this.image = enemyDragon;
     this.role = 'dragon';
