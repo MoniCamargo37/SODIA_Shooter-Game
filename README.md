@@ -1,4 +1,4 @@
-# Game name
+# SODIA GAME
 <img src="./img/screenshotGame.jpg">
 
 ## Description
